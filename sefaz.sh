@@ -20,7 +20,7 @@
 source ShellBot.sh
 
 #Informando bot que será usado
-bot_token='625744069:AAGTXbrysLdWXsapmqhI9SPYpgledYJWPa4'
+bot_token='[add aqui o token do seu bot]'
 
 # Inicializando o bot
 ShellBot.init --token "$bot_token"
