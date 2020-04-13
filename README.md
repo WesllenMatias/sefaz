@@ -18,7 +18,7 @@ apt-get install lynx -y
 ```
 git clone https://github.com/WesllenMatias/sefaz.git
 ```
-3. Abra o sefaz.sh e altere a variavel bot_token e adicione o token do seu bot telegram:
+3. Abra o **sefaz.sh** e altere a variavel **bot_token** e adicione o token do seu bot telegram:
 ```
 bot_token='[add aqui o token do seu bot]'
 ```
