@@ -4,9 +4,27 @@
 
 
 
-Repositório para projeto de envio de status sefaz via telegram e agora com consulta ao Downdetector exibindo a porcentagem de reclamações daquela data.
+Repositório para projeto de envio de status sefaz via telegram.
 
-Para rodar o scrip como serviço em seu servidor use:
+Para rodar o scrip como serviço em seu servidor siga os passos abaixo:
+
+1.  Instale o jq e o lynx:
+```
+apt-get install jq -y
+
+apt-get install lynx -y
+```
+2. Clone o repositório:
+```
+git clone https://github.com/WesllenMatias/sefaz.git
+```
+3. Acesse a pasta sefaz e dê permissão de execução aos arquivos ShellBot.sh e sefaz.sh:
+```
+chmod +x sefaz.sh
+
+chmod +x ShellBot.sh
+```
+4. Caso queira deixar ele rodando direto na máquina basta executar o comando abaixo:
 
 **nohup sefaz.sh &&**
 
