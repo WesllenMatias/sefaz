@@ -18,14 +18,18 @@ apt-get install lynx -y
 ```
 git clone https://github.com/WesllenMatias/sefaz.git
 ```
-3. Acesse a pasta sefaz e dê permissão de execução aos arquivos ShellBot.sh e sefaz.sh:
+3. Abra o sefaz.sh e altere a variavel bot_token e adicione o token do seu bot telegram:
+```
+bot_token='[add aqui o token do seu bot]'
+```
+4. Acesse a pasta sefaz e dê permissão de execução aos arquivos ShellBot.sh e sefaz.sh:
 ```
 chmod +x sefaz.sh
 
 chmod +x ShellBot.sh
 ```
-4. Caso queira deixar ele rodando direto na máquina basta executar o comando abaixo:
+5. Caso queira deixar ele rodando direto na máquina basta executar o comando abaixo:
 
-**nohup sefaz.sh &&**
+   **nohup sefaz.sh &&**
 
 _OBS: sefaz.sh e ShellBot.sh devem está no mesmo diretório._
