@@ -33,7 +33,7 @@ ShellBot.init --token "$bot_token"
 status="$(lynx -source http://www.nfe.fazenda.gov.br/portal/disponibilidade.aspx\?versao\=0.00 | \
 tail -n 150 | head -n 36 | grep imagens/bola_ | \
 sed 's/<td>/Status Sefaz: /;s/<\/td>.*src="/ /;s/".*//;s/<img.id=//' | \
-sed -e 's,imagens/bola_verde_P.png,✅,g;s,imagens/bola_amarela_P.png,⚠<fe0f>,g;s,imagens/bola_vermelho_P.png,❌,g')"
+sed -e 's,imagens/bola_verde_P.png,✅,g;s,imagens/bola_amarela_P.png,⚠,g;s,imagens/bola_vermelho_P.png,❌,g')"
 
 downdetector="$(lynx -source https://downdetector.com.br/fora-do-ar/nota-fiscal-eletronica | \
 head -n 1279 | \
@@ -66,9 +66,7 @@ $status
 
 *Consultado em `date +%d-%m-%Y` as `date +%H:%M:%S` *
 
-Downdetector:
-
-$downdetector " \
+" \
                                          --parse_mode markdown
            #$status=""
                 ;;
