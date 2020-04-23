@@ -28,8 +28,28 @@ chmod +x sefaz.sh
 
 chmod +x ShellBot.sh
 ```
-5. Caso queira deixar ele rodando direto na máquina basta executar o comando abaixo:
+5. Para deixar o bot rodando como servico dentro de sua maquina execute os passos abaixo:
 
-   **nohup sefaz.sh &&**
+### Crie o arquivo sefaz.service dentro de /etc/systemd/system/
 
-_OBS: sefaz.sh e ShellBot.sh devem está no mesmo diretório._
+```
+[Unit]
+Description=Sefaz
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/zabbix/sefaz/sefaz.sh start
+ExecStop=/home/zabbix/sefaz/sefaz.sh stop
+ExecReload=/home/zabbix/sefaz/sefaz.sh restart
+
+[Install]
+WantedBy=multi-user.target
+```
+6. Execute os comandos abaixo:
+
+```
+systemctl daemon-reload
+systemctl enable sefaz
+
+```
