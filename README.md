@@ -39,9 +39,9 @@ Description=Sefaz
 [Service]
 Type=simple
 RemainAfterExit=yes
-ExecStart=/home/zabbix/sefaz/sefaz.sh start
-ExecStop=/home/zabbix/sefaz/sefaz.sh stop
-ExecReload=/home/zabbix/sefaz/sefaz.sh restart
+ExecStart=/local/do/sefaz.sh start
+ExecStop=/local/do/sefaz/sefaz.sh stop
+ExecReload=/local/do/sefaz/sefaz.sh restart
 
 [Install]
 WantedBy=multi-user.target
