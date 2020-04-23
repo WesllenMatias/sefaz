@@ -53,3 +53,5 @@ systemctl daemon-reload
 systemctl enable sefaz
 
 ```
+
+_OBS: Dentro do Fonte sefaz.sh em **source** coloque o caminho absoluto de onde fica o ShellBot.sh_
